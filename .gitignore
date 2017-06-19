@@ -1,0 +1,8 @@
+# ignore following files
+
+
+*.o
+.kvadrat.c.swp
+kvadrat.c~ 
+#kvadrat.c#
+kvadrat
