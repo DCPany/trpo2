@@ -1,16 +1,23 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
+void vvod (float *a, float *b, float *c)
 {
-    float a,b,c;
+    float a1,b1,c1;
     printf("Введите a, b, c: ");
-    scanf("%f %f %f", &a, &b, &c);
-    if(a == 0)
+    scanf("%f %f %f", &a1, &b1, &c1);
+    *a=a1;
+    *b=b1;
+    *c=c1;
+}
+
+void podshet (float a, float b, float c)
+{
+    if(a == 0.0)
     {
-        if(b == 0)
+        if(b == 0.0)
         {
-            if(c == 0)
+            if(c == 0.0)
             {
                 printf("x - любое число\n");
             }
@@ -28,13 +35,13 @@ int main()
     {
         float d;
         d = b * b - 4 * a * c;
-        if(d < 0)
+        if(d < 0.0)
         {
             printf("Корней нет\n");
         }
         else
         {
-            if(d == 0)
+            if(d == 0.0)
             {
                 printf("x = %g\n", -b/(2*a));
             }
@@ -44,5 +51,12 @@ int main()
             }
         }
     }
+}
+
+int main()
+{
+    float a=0.0, b=0.0, c=0.0;
+    vvod (&a, &b, &c);
+    podshet (a, b, c);
     return 0;
 }
