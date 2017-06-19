@@ -1,5 +1,10 @@
 #ifndef FUNK
 #define FUNK
-void vvod (float *a, float *b, float *c);
-void podshet (float a, float b, float c);
+
+float Discriment(float a,float b,float c);
+
+int Proverka(float D);
+
+float Znachenie (float D, float a, float b, float c, int i);
+
 #endif

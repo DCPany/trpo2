@@ -1,55 +1,29 @@
-#include <stdio.h>
+#include "funk.h"
 #include <math.h>
 
-void vvod (float *a, float *b, float *c)
+int Proverka(float D)
 {
-    float a1,b1,c1;
-    printf("Введите a, b, c: ");
-    scanf("%f %f %f", &a1, &b1, &c1);
-    *a=a1;
-    *b=b1;
-    *c=c1;
+	if (D == 0) {
+		return 0;
+	}
+	if (D < 0) {
+		return 1;
+	}
+	if (D > 0) {
+		return 2;
+	}
+	return 0;
 }
 
-void podshet (float a, float b, float c)
+float Discriment(float a,float b, float c)
 {
-    if(a == 0.0)
-    {
-        if(b == 0.0)
-        {
-            if(c == 0.0)
-            {
-                printf("x - любое число\n");
-            }
-            else
-            {
-                printf("Корней нет\n");
-            }
-        }
-        else
-        {
-            printf ("x = %g\n", -c/b);
-        }
-    }
-    else
-    {
-        float d;
-        d = b * b - 4 * a * c;
-        if(d < 0.0)
-        {
-            printf("Корней нет\n");
-        }
-        else
-        {
-            if(d == 0.0)
-            {
-                printf("x = %g\n", -b/(2*a));
-            }
-            else
-            {
-                printf("x1 = %g, x2 = %g\n",(-b+d*d)/(2*a),(-b-d*d)/(2*a));
-            }
-        }
-    }
+	float D = b*b - 4 * a * c;
+	return D;
 }
 
+float Znachenie (float D, float a, float b, float c, int i)
+{
+	float x;
+	x = ((-1)* b + D*D * i) / (2 * a);
+	return x;
+}
