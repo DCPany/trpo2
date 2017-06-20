@@ -4,7 +4,7 @@
 // Proverka
 CTEST(Test_1_proverka, input_1)
 {
-    int result = Proverka(1);
+    int result = Proverka(1,2,3,1);
 	
     int expected = 2;
 	
@@ -13,7 +13,7 @@ CTEST(Test_1_proverka, input_1)
 
 CTEST(Test_2_proverka, input_m_1)
 {
-    int result = Proverka(-1);
+    int result = Proverka(-3,3,3,1);
 	
     int expected = 1;
 	
@@ -22,7 +22,7 @@ CTEST(Test_2_proverka, input_m_1)
 
 CTEST(Test_3_proverka, input_0)
 {
-    int result = Proverka(0);
+    int result = Proverka(0,1,2,1);
 	
     int expected = 0;
 	
